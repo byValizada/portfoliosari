@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  
+  --color-cosmic-bg: #0A0A0A;
+  --color-cosmic-card: rgba(17, 17, 17, 0.75);
+  --color-glow-blue: rgba(97, 218, 251, 0.45);
+  --color-glow-purple: rgba(79, 70, 229, 0.45);
+}
+
+/* Custom styles for premium sleek neutral layout */
+body {
+  background-color: #0A0A0A;
+  color: #E0E0E0;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+}
+
+/* Elegant Dark Glassmorphic Cards with Micro precision borders */
+.cosmic-card-blue {
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #222222;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cosmic-card-blue:hover {
+  border-color: #333333;
+  box-shadow: 0 0 0 1px rgba(97, 218, 251, 0.3), 0 12px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+.cosmic-card-purple {
+  background: rgba(17, 17, 17, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #222222;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.cosmic-card-purple:hover {
+  border-color: #333333;
+  box-shadow: 0 0 0 1px rgba(79, 70, 229, 0.3), 0 12px 40px rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+}
+
+.glow-text-blue {
+  text-shadow: 0 0 15px rgba(97, 218, 251, 0.5);
+}
+
+.glow-text-purple {
+  text-shadow: 0 0 15px rgba(79, 70, 229, 0.5);
+}
+
+/* Custom interactive mesh visual workspace backdrop with high balance */
+.cosmic-mesh {
+  background-image: 
+    radial-gradient(circle at 12% 18%, rgba(97, 218, 251, 0.05) 0%, transparent 45%),
+    radial-gradient(circle at 85% 82%, rgba(79, 70, 229, 0.06) 0%, transparent 45%),
+    radial-gradient(circle at 50% 50%, #111111 0%, #0A0A0A 100%);
+}
+
+.button-glow-blue {
+  box-shadow: 0 0 15px rgba(97, 218, 251, 0.25);
+}
+
+.button-glow-blue:hover {
+  box-shadow: 0 0 25px rgba(97, 218, 251, 0.45);
+}
+
+/* Custom styled modern Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0A0A0A;
+}
+::-webkit-scrollbar-thumb {
+  background: #222222;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #333333;
+}
+
+@keyframes pulse-gentle {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.02); opacity: 1; }
+}
+
+.pulse-glow {
+  animation: pulse-gentle 4.5s infinite ease-in-out;
+}
+
